@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-currencies",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:paylike/swift-currencies.git",
+      "state" : {
+        "revision" : "ed6c24d7dae62d2891be831ce6e849ca985e0cd3",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
