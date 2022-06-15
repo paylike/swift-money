@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:paylike/swift-currencies.git",
       "state" : {
-        "revision" : "ed6c24d7dae62d2891be831ce6e849ca985e0cd3",
-        "version" : "0.1.0"
+        "revision" : "ae32c4ddaae8854eda28d485993f4237eb601dc5",
+        "version" : "0.4.0"
       }
     }
   ],
