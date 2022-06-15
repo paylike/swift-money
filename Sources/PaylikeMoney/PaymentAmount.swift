@@ -5,10 +5,10 @@ import PaylikeCurrencies
  Describes the string representation options for PaymentAmount
  */
 public struct PaymentAmountStringOptions {
-    public init() {
-        padIntegers = 0
-        padFractions = 0
-        currency = true
+    public init(padIntegers: Int = 0, padFractions: Int = 0, currency: Bool = true) {
+        self.padIntegers = padIntegers
+        self.padFractions = padFractions
+        self.currency = currency
     }
     /**
      Describes padding for the integers
@@ -70,8 +70,8 @@ public struct PaymentAmount : Equatable, Codable {
             range = dividerIndex..<integer.endIndex
             somes = String(integer[range])
         }
-        let paddedWholes = wholes.padding(toLength: opts.padIntegers + wholes.count, withPad: " ", startingAt: wholes.count)
-        let paddedSomes = somes.padding(toLength: opts.padFractions + somes.count, withPad: "0", startingAt: 0)
+        let paddedWholes = "".padding(toLength: opts.padIntegers, withPad: " ", startingAt: 0) + wholes
+        let paddedSomes = opts.padFractions > 0 ? somes +  "".padding(toLength: abs(somes.count - opts.padFractions), withPad: "0", startingAt: 0) : somes
         let currencyString = opts.currency ? currency.code + " " : ""
         return (currencyString +
                 (negative ? "-" : "") +
