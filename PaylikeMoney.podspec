@@ -14,4 +14,5 @@ interface to handle currencies that can be used in the Paylike ecosystem
   s.source           = { :git => 'https://github.com/paylike/swift-money.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
   s.source_files = 'Sources/PaylikeMoney/**/*'
+  s.dependency 'PaylikeCurrencies'
 end
