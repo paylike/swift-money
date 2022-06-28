@@ -34,12 +34,12 @@ public struct PaymentAmount : Equatable, Codable {
      Important to notice: this is not a mathematical equation
      */
     public static func == (lhs: PaymentAmount, rhs: PaymentAmount) -> Bool {
-        return lhs.currency.code == rhs.currency.code && lhs.value == rhs.value && lhs.exponent == rhs.exponent
+        return lhs.currency == rhs.currency && lhs.value == rhs.value && lhs.exponent == rhs.exponent
     }
     /**
      Currency of the payment
      */
-    public let currency: PaylikeCurrency;
+    public let currency: String;
     /**
      Value of the amount
      */
@@ -72,7 +72,7 @@ public struct PaymentAmount : Equatable, Codable {
         }
         let paddedWholes = "".padding(toLength: opts.padIntegers, withPad: " ", startingAt: 0) + wholes
         let paddedSomes = opts.padFractions > 0 ? somes +  "".padding(toLength: abs(somes.count - opts.padFractions), withPad: "0", startingAt: 0) : somes
-        let currencyString = opts.currency ? currency.code + " " : ""
+        let currencyString = opts.currency ? currency + " " : ""
         return (currencyString +
                 (negative ? "-" : "") +
                 paddedWholes +

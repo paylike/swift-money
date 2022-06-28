@@ -19,7 +19,7 @@ public struct PaylikeMoney {
     /**
         Allows the conversion from double to PaymentAmount
      */
-    public static func fromDouble(currency: PaylikeCurrency, n: Double) throws -> PaymentAmount {
+    public static func fromDouble(currency: String, n: Double) throws -> PaymentAmount {
         if !n.isFinite {
             throw MoneyError.UnsafeNumber(number: n)
         }

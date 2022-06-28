@@ -3,7 +3,7 @@ import XCTest
 import PaylikeCurrencies
 
 final class PaylikeMoneyTests: XCTestCase {
-    let eur = PaylikeCurrencies.byCode(code: CurrencyCode.EUR)
+    let eur = "EUR"
     func testFromDouble() throws {
         XCTAssertEqual(try PaylikeMoney.fromDouble(currency: eur, n: 0),
                        PaymentAmount(currency: eur, value: 0, exponent: 0))

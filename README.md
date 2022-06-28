@@ -11,7 +11,7 @@ Currently this package only supports a fraction of our JavaScript library. We ma
 __SPM__:
 ```swift
 // dependencies: 
-.package(url: "git@github.com:paylike/swift-money.git", .upToNextMajor(from: "0.1.0")
+.package(url: "git@github.com:paylike/swift-money.git", .upToNextMajor(from: "0.2.0")
 
 // target:
 .product(name: "PaylikeMoney", package: "swift-money")
@@ -25,10 +25,10 @@ pod 'PaylikeMoney'
 
 ## Usage
 
-Check [PaylikeCurrencies](https://github.com/paylike/swift-currencies) for our supported currencies
+Use [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency codes
 
 ```swift
-let eur = PaylikeCurrencies.byCode(CurrencyCode.EUR)
+let eur = "EUR"
 
 // Create from double
 let amount = PaylikeMoney.fromDouble(currency: eur, n: 0.01) // EUR 0.01
