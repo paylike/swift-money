@@ -1,6 +1,5 @@
 import XCTest
 @testable import PaylikeMoney
-import PaylikeCurrencies
 
 final class PaylikeMoneyTests: XCTestCase {
     let eur = "EUR"

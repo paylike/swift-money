@@ -1,5 +1,4 @@
 import Foundation
-import PaylikeCurrencies
 
 /**
  Describes the string representation options for PaymentAmount

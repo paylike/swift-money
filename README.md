@@ -11,7 +11,7 @@ Currently this package only supports a fraction of our JavaScript library. We ma
 __SPM__:
 ```swift
 // dependencies: 
-.package(url: "git@github.com:paylike/swift-money.git", .upToNextMajor(from: "0.2.0")
+.package(url: "git@github.com:paylike/swift-money.git", .upToNextMajor(from: "0.2.1"))
 
 // target:
 .product(name: "PaylikeMoney", package: "swift-money")

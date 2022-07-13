@@ -1,5 +1,4 @@
 import Foundation
-import PaylikeCurrencies
 
 /**
     Responsible for creating and manipulating payment amounts
